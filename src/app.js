@@ -15,7 +15,7 @@ if (result.error) {
 
 // custom modules
 const { logger } = require('./utils');
-const { MongoDB } = require('./db');
+
 const allRoutes = require('./routes');
 
 const { PORT } = process.env;

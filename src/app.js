@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
     msg: 'Welcome to User Management Services',
   });
 });
-MongoDB.connect;
+
 app.listen(PORT, () => logger.info(`App running at http://localhost:${PORT}`));
 
 /*

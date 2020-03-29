@@ -6,7 +6,7 @@ const { REDIS_URL } = process.env;
 const client = redis.createClient(REDIS_URL);
 
 client.on('connect', () => {
-  logger.info('Connected to REDIS: '+REDIS_URL);
+  logger.info('Connected to REDIS: ' + REDIS_URL);
 });
 
 client.on('error', (err) => {

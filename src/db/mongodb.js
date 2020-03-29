@@ -3,9 +3,7 @@ const { logger } = require('../utils');
 const { MONGODB_URI } = process.env;
 
 mongoose.Promise = global.Promise;
-
 // const MONGODB_URI = `mongodb://${username}:${password}@${host}:${port}/${databaseName}`;
-
 const options = {
   reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
   reconnectInterval: 500, // Reconnect every 500ms

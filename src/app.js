@@ -11,10 +11,10 @@ if (result.error) {
 
 // custom modules
 const { logger } = require('./utils');
-const { MySQL } = require('./db');
+const { MySQL, MongoDB } = require('./db');
 const allRoutes = require('./routes');
 
-const { PORT } = process.env;
+const { PORT, DB_HOST, DB_PORT } = process.env;
 
 const app = express();
 
@@ -35,13 +35,15 @@ app.get('/', (req, res) => {
     msg: 'Welcome to User Management Services',
   });
 });
+MongoDB.connect
+app.listen(PORT, () => logger.info(`App running at http://localhost:${PORT}`));
 
-MySQL.sequelize
+/*MySQL.sequelize
   .sync()
   .then(() => {
     app.listen(PORT, () => logger.info(`App running at http://localhost:${PORT}`));
   })
-  .catch(err => logger.log('error', err));
+  .catch(err => logger.log('error', err));*/
 
 app.use(allRoutes);
 

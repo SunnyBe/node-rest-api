@@ -13,6 +13,14 @@ const {
 const { sendResponse, handleCustomError } = require('../../utils');
 const ResponseMessages = require('../../constants/responseMessages');
 
+async function testUsersController(req, res) {
+  try {
+    return sendResponse(res, 200, {}, "Successful fetch")
+  } catch (err) {
+    return handleCustomError(res, err);
+  }
+}
+
 async function createNewUserController(req, res) {
   try {
     const validationErr = validateCreateUserRequest(req);
@@ -99,6 +107,7 @@ async function changeUserPasswordController(req, res) {
 }
 
 module.exports = {
+  testUsersController,
   createNewUserController,
   loginUserController,
   changeUserEmailController,

@@ -1,7 +1,11 @@
 const express = require('express');
+
 const requestValidator = require('express-validator');
+
 const cors = require('cors');
+
 const morgan = require('morgan');
+
 const dotenv = require('dotenv');
 
 const result = dotenv.config();

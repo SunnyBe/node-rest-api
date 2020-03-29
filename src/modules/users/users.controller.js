@@ -15,7 +15,7 @@ const ResponseMessages = require('../../constants/responseMessages');
 
 async function testUsersController(req, res) {
   try {
-    return sendResponse(res, 200, {}, `Successful fetch`);
+    return sendResponse(res, 200, {}, 'Successful fetch');
   } catch (err) {
     return handleCustomError(res, err);
   }

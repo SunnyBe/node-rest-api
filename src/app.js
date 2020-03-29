@@ -38,7 +38,8 @@ app.get('/', (req, res) => {
 MongoDB.connect;
 app.listen(PORT, () => logger.info(`App running at http://localhost:${PORT}`));
 
-/*MySQL.sequelize
+/*
+MySQL.sequelize
   .sync()
   .then(() => {
     app.listen(PORT, () => logger.info(`App running at http://localhost:${PORT}`));

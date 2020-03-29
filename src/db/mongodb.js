@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
+
 const { logger } = require('../utils');
+
 const { MONGODB_URI } = process.env;
 
 mongoose.Promise = global.Promise;
